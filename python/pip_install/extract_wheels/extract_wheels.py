@@ -103,6 +103,17 @@ def main() -> None:
     # Locate all wheels
     wheels = [whl for whl in glob.glob("*.whl")]
 
+    def to_lower(whl_list):
+        for whl in whl_list:
+            lower = whl.lower()
+            if lower.startswith('hypercorn') or lower.startswith('quart') or lower.startswith('inquirerpy'):
+                os.rename(whl, lower)
+                yield lower
+            else:
+                yield whl
+
+    wheels = tuple(to_lower(wheels))
+
     # Collect all annotations
     reqs = {whl: wheel.Wheel(whl).name for whl in wheels}
     annotations = args.annotations.collect(reqs.values())
