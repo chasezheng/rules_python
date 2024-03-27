@@ -9,8 +9,8 @@ load("//third_party/github.com/bazelbuild/bazel-skylib/lib:versions.bzl", "versi
 _RULE_DEPS = [
     (
         "pypi__build",
-        "https://files.pythonhosted.org/packages/7a/24/ee8271da317b692fcb9d026ff7f344ac6c4ec661a97f0e2a11fa7992544a/build-0.8.0-py3-none-any.whl",
-        "19b0ed489f92ace6947698c3ca8436cb0556a66e2aa2d34cd70e2a5d27cd0437",
+        "https://files.pythonhosted.org/packages/4f/81/4849059526d02fcc9708e19346dd740e8b9edd2f0675ea7c38302d6729df/build-1.1.1-py3-none-any.whl",
+        "8ed0851ee76e6e38adce47e4bee3b51c771d86c64cf578d0c2245567ee200e73",
     ),
     (
         "pypi__click",
@@ -24,8 +24,8 @@ _RULE_DEPS = [
     ),
     (
         "pypi__installer",
-        "https://files.pythonhosted.org/packages/1b/21/3e6ebd12d8dccc55bcb7338db462c75ac86dbd0ac7439ac114616b21667b/installer-0.5.1-py3-none-any.whl",
-        "1d6c8d916ed82771945b9c813699e6f57424ded970c9d8bf16bbc23e1e826ed3",
+        "https://files.pythonhosted.org/packages/e5/ca/1172b6638d52f2d6caa2dd262ec4c811ba59eee96d54a7701930726bce18/installer-0.7.0-py3-none-any.whl",
+        "05d1933f0a5ba7d8d6296bb6d5018e7c94fa473ceb10cf198a92ccea19c27b53",
     ),
     (
         "pypi__packaging",
@@ -34,18 +34,18 @@ _RULE_DEPS = [
     ),
     (
         "pypi__pep517",
-        "https://files.pythonhosted.org/packages/f4/67/846c08e18fefb265a66e6fd5a34269d649b779718d9bf59622085dabd370/pep517-0.12.0-py2.py3-none-any.whl",
-        "dd884c326898e2c6e11f9e0b64940606a93eb10ea022a2e067959f3a110cf161",
+        "https://files.pythonhosted.org/packages/25/6e/ca4a5434eb0e502210f591b97537d322546e4833dcb4d470a48c375c5540/pep517-0.13.1-py3-none-any.whl",
+        "31b206f67165b3536dd577c5c3f1518e8fbaf38cbc57efff8369a392feff1721",
     ),
     (
         "pypi__pip",
-        "https://files.pythonhosted.org/packages/84/25/5734a44897751d8bac6822efb819acda2d969bcc1b915bbd7d48102952cb/pip-22.2.1-py3-none-any.whl",
-        "0bbbc87dfbe6eed217beff0021f8b7dea04c8f4a0baa9d31dc4cff281ffc5b2b",
+        "https://files.pythonhosted.org/packages/8a/6a/19e9fe04fca059ccf770861c7d5721ab4c2aebc539889e97c7977528a53b/pip-24.0-py3-none-any.whl",
+        "ba0d021a166865d2265246961bec0152ff124de910c5cc39f1156ce3fa7c69dc",
     ),
     (
         "pypi__pip_tools",
-        "https://files.pythonhosted.org/packages/bf/3a/a8b09ca5ea24e4ddfa4d2cdf885e8c6618a4b658b32553f897f948aa0f67/pip_tools-6.8.0-py3-none-any.whl",
-        "3e5cd4acbf383d19bdfdeab04738b6313ebf4ad22ce49bf529c729061eabfab8",
+        "https://files.pythonhosted.org/packages/0d/dc/38f4ce065e92c66f058ea7a368a9c5de4e702272b479c0992059f7693941/pip_tools-7.4.1-py3-none-any.whl",
+        "4c690e5fbae2f21e87843e89c26191f0d9454f362d8acdbd695716493ec8b3a9",
     ),
     (
         "pypi__pyparsing",
@@ -54,8 +54,8 @@ _RULE_DEPS = [
     ),
     (
         "pypi__setuptools",
-        "https://files.pythonhosted.org/packages/7c/5b/3d92b9f0f7ca1645cba48c080b54fe7d8b1033a4e5720091d1631c4266db/setuptools-60.10.0-py3-none-any.whl",
-        "782ef48d58982ddb49920c11a0c5c9c0b02e7d7d1c2ad0aa44e1a1e133051c96",
+        "https://files.pythonhosted.org/packages/92/e1/1c8bb3420105e70bdf357d57dd5567202b4ef8d27f810e98bb962d950834/setuptools-69.2.0-py3-none-any.whl",
+        "c21c49fb1042386df081cb5d86759792ab89efca84cf114889191cd09aacc80c",
     ),
     (
         "pypi__tomli",
@@ -64,8 +64,8 @@ _RULE_DEPS = [
     ),
     (
         "pypi__wheel",
-        "https://files.pythonhosted.org/packages/27/d6/003e593296a85fd6ed616ed962795b2f87709c3eee2bca4f6d0fe55c6d00/wheel-0.37.1-py2.py3-none-any.whl",
-        "4bdcd7d840138086126cd09254dc6195fb4fc6f01c050a1d7236f2630db1d22a",
+        "https://files.pythonhosted.org/packages/7d/cd/d7460c9a869b16c3dd4e1e403cce337df165368c71d6af229a74699622ce/wheel-0.43.0-py3-none-any.whl",
+        "55c570405f142630c6b9f72fe09d9b67cf1477fcf543ae5b8dcb1f5b7377da81",
     ),
     (
         "pypi__importlib_metadata",
