@@ -98,7 +98,7 @@ def _python_repository_impl(rctx):
         )
 
     # Write distutils.cfg to the Python installation.
-    if "windows" in rctx.os.name:
+    if "windows" in platform:
         distutils_path = "Lib/distutils/distutils.cfg"
     else:
         distutils_path = "lib/python{}/distutils/distutils.cfg".format(python_short_version)
@@ -106,6 +106,25 @@ def _python_repository_impl(rctx):
         rctx.file(distutils_path, rctx.read(rctx.attr.distutils))
     elif rctx.attr.distutils_content:
         rctx.file(distutils_path, rctx.attr.distutils_content)
+
+    if "linux" in platform:
+        # Workaround around https://github.com/indygreg/python-build-standalone/issues/231
+
+        head_and_release, _, _ = url.rpartition("/")
+        _, _, release = head_and_release.rpartition("/")
+        if not release.isdigit():
+            # Maybe this is some custom toolchain, so skip this
+            pass
+        elif int(release) >= 20240224:
+            # Starting with this release the Linux toolchains have infinite symlink loop
+            # on host platforms that are not Linux. Delete the files no
+            # matter the host platform so that the cross-built artifacts
+            # are the same irrespective of the host platform we are
+            # building on.
+            #
+            # Link to the first affected release:
+            # https://github.com/indygreg/python-build-standalone/releases/tag/20240224
+            rctx.delete("share/terminfo")
 
     # Make the Python installation read-only.
     if not rctx.attr.ignore_root_user_error:
